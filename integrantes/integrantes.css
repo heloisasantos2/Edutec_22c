@@ -1,0 +1,141 @@
+:root{
+    --verde-barra:#8BAF83;
+    --verde-paginas:#A7C4A1;
+    --verde-letras:#31572C;
+    --branco-fundo:#F6F6E9;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+
+    font-family: Playfair Display, regular;
+    background-color: var(--verde-paginas);
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+header {
+    text-align: center;
+
+    background-color: var(--verde-barra);
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    color: var(--verde-letras);
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+.carousel-container {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    text-align: center;
+    background-color: var(--verde-barra);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-item img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.login div img{
+    width: 50px;
+    height: 50px;
+}
+
+button.prev, button.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 18px;
+}
+
+button.prev {
+    left: 10px;
+}
+
+button.next {
+    right: 10px;
+}
+
+button.prev:hover, button.next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+h1 {
+    text-align: center;
+    color: var(--verde-letras);
+}
+
+main {
+    margin-top: 120px;
+}
+
+header button:hover {
+    background-color: var(--verde-paginas);
+}
+
+header button.bio {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+header button img {
+    width: 60px;
+}
+
+
+.logo_icone img {
+    height: 80px;
+    width: 80px;
+}
+
+.bio a, .conteudo a, .jogos a, .integrantes a, .ajuda a {
+    color: var(--verde-letras);
+    text-decoration: #3B543F;
+}

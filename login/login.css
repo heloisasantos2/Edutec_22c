@@ -1,0 +1,273 @@
+:root {
+    --verde-barra: #8BAF83;
+    --verde-paginas: #A7C4A1;
+    --verde-letras: #31572C;
+    --branco-fundo: #F6F6E9;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--verde-paginas);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: var(--verde-barra);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--verde-letras);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo_icone img {
+    width: 50px;
+    height: auto;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    color: var(--verde-letras);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header button:hover {
+    background-color: var(--verde-paginas);
+    color: #3B543F;
+}
+
+header button.bio {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+header button img {
+    width: 60px;
+    height: auto;
+}
+
+:root {
+    --verde-barra: #8BAF83;
+    --verde-paginas: #A7C4A1;
+    --verde-letras: #31572C;
+    --branco-fundo: #F6F6E9;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--verde-paginas);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+header {
+    background-color: var(--verde-barra);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--verde-letras);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header .logo_icone img {
+    width: 50px;
+    height: auto;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    color: var(--verde-letras);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+header button a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header button:hover {
+    background-color: var(--verde-paginas);
+    color: #3B543F;
+}
+
+header button.bio {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+header button img {
+    width: 60px;
+    height: auto;
+}
+
+h1 {
+
+    font-family: 'Inter', sans-serif;
+    padding: 34px;
+    font-size: 30px;
+    color: var(--verde-letras);
+    margin-top: 80px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    margin-bottom: 12px;
+    margin: 1px 1px;
+    position: absolute;
+    top: 100px;
+    left: 47%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    color: var(--verde-letras);
+    text-align: center;
+}
+
+form {
+    background-color: var(--verde-barra);
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: var(--verde-letras);
+    width: 350px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    margin-right: 100px;
+}
+
+form div {
+    margin-bottom: 15px;
+    width: 300px;
+    border: none;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--verde-letras);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+form button {
+    background-color: var(--verde-paginas);
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--verde-letras);
+    color: #333;
+}
+
+.login div img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo_icone img {
+    width: 200px;
+    height: 200px;
+}
+
+header button.bio a, 
+header button.conteudo a, 
+header button.jogos a, 
+header button.integrantes a, 
+header button.ajuda a {
+    color: var(--verde-letras);
+    text-decoration: none;
+}
+
+form div {
+    margin-bottom: 15px;
+    width: 300px;
+    border: none;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--verde-letras);
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+}
+
+form button {
+    background-color: var(--verde-paginas);
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+form button:hover {
+    background-color: var(--verde-letras);
+    color: #333;
+}
+
+.login div img {
+    width: 50px;
+    height: 50px;
+}
+
+.logo_icone img {
+    width: 200px;
+    height: 200px;
+}
+
+header button.bio a, 
+header button.conteudo a, 
+header button.jogos a, 
+header button.integrantes a, 
+header button.ajuda a {
+    color: var(--verde-letras);
+    text-decoration: none;
+}

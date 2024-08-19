@@ -1,0 +1,265 @@
+:root{
+    --verde-barra:#8BAF83;
+    --verde-paginas:#A7C4A1;
+    --verde-letras:#31572C;
+    --branco: #ffffff;
+    --cinza-claro: #d3d3d3;
+    --branco-fundo:#F6F6E9;
+  
+  }
+  
+  body {
+    font-family: Playflair Display, regular;
+    background-color: var(--verde-paginas);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+  
+    background: linear-gradient(to bottom, #A7C4A1 70%, var(--branco-fundo) 20%);
+  }
+  
+  header {
+    background-color: var(--verde-barra);
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+  }
+  
+  
+  .conteudo {
+    font-family: Inter, light;
+    background-color:var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .conteudo:hover {
+    background-color: var(--verde-paginas);
+  }
+  
+  .jogos {
+    font-family: inter, light;
+    background-color: var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .jogos:hover {
+    background-color: var(--verde-paginas);
+  }
+  
+  .integrantes {
+    font-family: inter,light;
+    background-color: var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .integrantes:hover {
+    background-color: var(--verde-paginas);
+  }
+  
+  .ajuda {
+    font-family: inter,light;
+    background-color: var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+  
+  .ajuda:hover {
+    background-color: var(--verde-paginas);
+  }
+  
+  .Login {
+    font-family: inter,light;
+    background-color: var(--verde-barra);
+    border: 10px;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: backgroud-color 0.3s, transform 0.2s;
+  }
+  
+  .bio a, .conteudo a, .jogos a, .integrantes a, .ajuda a, .comecar a {
+      color: var(--verde-letras);
+      text-decoration: #3B543F;
+  }
+  
+  .login:hover {
+    background-color: var(--verde-paginas);
+  }
+  
+  .Login img{
+    width: 40px;
+    height: 40px;
+  }
+  
+  .bio{
+    font-family: inter,light;
+    background-color: var(--verde-barra);
+    border: 10px;
+    color: var(--verde-letras);
+    padding: 10px 10px;
+    font-size: 40px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 5px;
+  }
+  
+  .bio:hover {
+    background-color: var(--verde-paginas);
+  }
+  
+  button {
+    margin-top: 50px;
+    margin-left: 30px;
+  }
+  
+  .barra {
+    background-color: var(--verde-barra);
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .logo_icone img {
+    height: 50px;
+  }
+  
+  .barra button {
+    background: none;
+    border: none;
+    color: var(--verde-letras);
+    font-size: 20px;
+    margin-right: 20px;
+    cursor: pointer;
+  }
+  
+  .barra .Login img {
+    height: 50px;
+  }
+  
+  main {
+    padding: 40px 0;
+    margin-top: 100px;
+  }
+  
+  .quiz-section {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+  }
+  
+  h1 {
+     font-family: "Jomhuria", serif;
+    color: var(--verde-letras);
+    text-align: center;
+    font-size: 8em;
+    margin-bottom: 100px;
+    margin: 1px;
+  }
+  
+  button {
+    align-items: center;
+    font-family: inter, light;
+    text-align: center;
+    padding: 1px 15px;
+    font-size: 1.3em;
+    background: #9AB284;
+    color: var(--branco-fundo);
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .quiz-options {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .option {
+    background-color: #f2f2f2;
+    width: 100px;
+    height: 98px;
+    padding: 19px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .option:hover {
+    transform: translateY(-5px);
+  }
+  
+  .level {
+    background-color: #8cc78c;
+    padding: 10px 15px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+  }
+  
+  .level span {
+    font-size: 1.5em;
+    color: #fff;
+    font-weight: bold;
+  }
+  
+  .option img {
+    width: 100px;
+    height: 100px;
+    align-items: center;
+  }
+  
+  footer {
+    background-color: #8cc78c;
+    padding: 20px 0;
+    text-align: center;
+    color: #fff;
+  }
+  
+  h2{
+    text-align: center;
+    font-size: 1.2em;
+    margin: 3px;
+    margin-bottom: 40px;
+      font-family: inter, semi bold;
+    color: var(--branco-fundo);
+    font-weight: 200;
+  }

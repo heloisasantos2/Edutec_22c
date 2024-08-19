@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --verde-barra: #8BAF83;
+    --verde-paginas: #A7C4A1;
+    --verde-letras: #31572C;
+}
+
+body {
+    background-color: var(--verde-paginas);
+}
+
+header {
+    background-color: var(--verde-barra);
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+main {
+    text-align: center;
+    margin-top: 100px;
+}
+
+main h1 {
+    color: #3F5A42;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: x-large;
+}
+
+form {
+    padding: 20px;
+    border-bottom: none;
+    border-radius: 30px;
+    width: 300px;
+    max-width: 90%;
+    position: relative;
+    width: 80%;
+    max-width: 600px;
+    text-align: center;
+
+}
+
+form .lupa img {
+    position: absolute;
+    top: 50%;
+    align-items: center;
+    left: 20px;
+    transform: translateY(-50%);
+    width: 24px;
+    height: 24px;
+}
+
+form input[type="text"] {
+    width: 100%;
+    padding: 15px 20px 15px 60px;
+    border-radius: 30px;
+    border: none;
+    font-size: 18px;
+    background-color: #F1ECD8;
+    color: #3F5A42;
+}
+
+form input[type="text"]::placeholder {
+    color: var(--verde-letras);
+}
+
+.conteudo {
+    background-color: var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.conteudo:hover {
+    background-color: var(--verde-paginas);
+}
+
+.jogos {
+    background-color: var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.jogos:hover {
+    background-color: var(--verde-paginas);
+}
+
+.integrantes {
+    background-color: var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.integrantes:hover {
+    background-color: var(--verde-paginas);
+    border-radius: 5px;
+}
+
+.ajuda {
+    background-color: var(--verde-barra);
+    border: none;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.ajuda:hover {
+    background-color: var(--verde-paginas);
+}
+
+.Login {
+    background-color: var(--verde-barra);
+    border: 10px;
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.Login img {
+    width: 40px;
+    height: 40px;
+}
+
+button:hover {
+    background-color: var(--verde-paginas);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+header button img {
+    width: 60px;
+}
+
+.bio {
+    background-color: var(--verde-barra);
+    border: 10px;
+    color: var(--verde-letras);
+    padding: 10px 10px;
+    font-size: 35px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-weight: bolder;
+    border-radius: 5px;
+}
+
+.bio:hover {
+    background-color: var(--verde-paginas);
+}
+
+.lupa {
+    height: 30px;
+    width: 30px;
+}
+
+.logo_icone img {
+    height: 80px;
+    width: 80px;
+}
+
+.bio a,
+.conteudo a,
+.jogos a,
+.integrantes a,
+.ajuda a {
+    color: var(--verde-letras);
+    text-decoration: #3B543F;
+}
+
+.lupa {
+    display: flex;
+    gap: 20px;
+    margin: 30px 0;
+}
+
+.lupa img {
+    width: 50px;
+    height: 50px;
+}
+
+.email {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    margin: 30px 0;
+}
+
+.email img {
+    width: 60px;
+    height: 60px;
+}
+
+.email p {
+    font-size: 1.2em;
+    font-weight: 400;
+    color: var(--verde-letras);
+}

@@ -1,0 +1,145 @@
+:root{
+    --verde-barra:#8BAF83;
+    --verde-paginas:#A7C4A1;
+    --verde-letras:#31572C;
+    --branco-fundo:#F6F6E9;
+}
+
+body {
+    font-family: Playfair Display, regular;
+    background-color: var(--verde-paginas);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+header {
+    background-color: var(--verde-barra);
+    color: var(--verde-letras);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+header button {
+    background-color: transparent;
+    border: none;
+    color: #3B543F;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 0 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: Inter, light;
+}
+
+button:hover {
+    background-color: var(--verde-paginas);
+    text-decoration: none;
+}
+
+header button.bio {
+    font-size: 34px;
+    font-weight: bold;
+
+}
+
+header button img {
+    width: 60px;
+}
+
+.principal {
+    display: flex;
+    align-items: flex-start;
+}
+
+.tigre {
+    margin-left: 10px;
+}
+
+.boas_vindas img{
+    width: 130px 2px;
+}
+
+.boas_vindas {
+    background-color: #F6F6E9;
+    max-width: 100%;
+    height: 700px;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: flex-start;
+    margin-top: 120px;
+}
+
+ h2 {
+    color: var(--verde-letras);
+    font-size: 48px;
+    align-items: start;
+    text-align: flex-start;
+    margin-top: 37px;
+    font-family: Inter, light;
+
+
+}
+
+ h1 {
+    color: var(--verde-letras);
+    font-size: 20px;
+    line-height: 1.6;
+    align-items: start;
+    padding-right: 2px;
+    font-family: Inter, light;
+}
+
+
+.boas_vindas button {
+    background-color: var(--verde-barra);
+    color: white;
+    padding: 10px 5px;
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    align-items: start;
+}
+
+.boas_vindas button:hover {
+    background-color: var(--verde-paginas);
+}
+
+
+.boas_vindas img {
+    width: 130px 2px;
+    align-items: self-start;   
+}
+
+.login div img{
+    width: 50px;
+    height: 50px;
+}
+
+.logo_icone {
+    height: 80px;
+    width: 80px;
+}
+
+div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bio a, .conteudo a, .jogos a, .integrantes a, .ajuda a, .comecar a {
+    color: var(--verde-letras);
+    text-decoration: #3B543F;
+}
