@@ -10,31 +10,25 @@
     <title>Quiz Edutec</title>
 </head>
 <body>
-    <header>
-       
-    </header>
-
     <main>
         <section class="pergunta">
             <h2>COMO A BIOACUMULAÇÃO DE TOXINAS EM UMA CADEIA ALIMENTAR PODE IMPACTAR OS NÍVEIS TRÓFICOS SUPERIORES?</h2>
         </section>
 
         <section class="alternativas">
-            <form action="">
-                <label for="alternativa_a">
-                    <input type="radio" id="alternativa_a">
-
+            <form>
+                <label for="alternativa_0">
+                    <input type="radio" id="alternativa_0" name="answer" value="false">
                     <div>
                         <span>A</span>
                         As toxinas são diluídas à medida que se movem para cima na cadeia alimentar, reduzindo seu impacto nos predadores.
                     </div>
                 </label>
             </form>
-
-            <form action="">
-                <label for="alternativa_b">
-                    <input type="radio" id="alternativa_b">
-
+            
+            <form>
+                <label for="alternativa_1">
+                    <input type="radio" id="alternativa_1" name="answer" value="true">
                     <div>
                         <span>B</span>
                         As toxinas se acumulam em maiores concentrações nos níveis tróficos superiores, podendo causar danos graves aos predadores de topo.
@@ -42,10 +36,9 @@
                 </label>
             </form>
 
-            <form action="">
-                <label for="alternativa_c">
-                    <input type="radio" id="alternativa_c">
-
+            <form>
+                <label for="alternativa_2">
+                    <input type="radio" id="alternativa_2" name="answer" value="false">
                     <div>
                         <span>C</span>
                         Os níveis tróficos superiores são imunes à bioacumulação de toxinas devido à sua posição na cadeia alimentar.
@@ -54,13 +47,17 @@
             </form>
 
             <div class="progress-bar">
-                <div class="progress" style="width: 40%;"></div>
+                <div class="progress" style="width: 0%;"></div> 
             </div>
+
             <div class="pergunta">
                 <span class="timer">00:00</span>
             </div>
-            <button>Próximo</button>
+
+            <button id="nextButton">Próximo</button>
         </section>
     </main>
+
+    <script src="quizdificil.js"></script>
 </body>
 </html>

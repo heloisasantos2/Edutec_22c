@@ -116,11 +116,13 @@ main {
     align-items: center;
     background-color: var(--branco-fundo);
     padding: 15px 20px;
-    border: 2px solid var(--vermelho);
+    border: 2px solid transparent;
     border-radius: 30px;
     font-size: 18px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: border-color 0.3s ease;
+    min-height: 60px;
+    box-sizing: border-box; 
 }
 
 .alternativas label:hover {

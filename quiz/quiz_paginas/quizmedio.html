@@ -10,60 +10,54 @@
     <title>Quiz Edutec</title>
 </head>
 <body>
-    <header>
-       
-    </header>
+    <section class="pergunta">
 
-    <main>
-        <section class="pergunta">
-            <h2>Qual O PAPEL DOS DECOMPOSITORES EM UMA <BR>
-            CADEIA ALIMENTAR?
-        </section>
+        <h2>Qual O PAPEL DOS DECOMPOSITORES EM UMA <br> CADEIA ALIMENTAR?</h2>
+    </section>
 
-        <section class="alternativas">
-            <form action="">
-                <label for="alternativa_a">
-                    <input type="radio" id="alternativa_a">
+    <section class="alternativas">
+        <form>
+            <label for="alternativa_0">
+                <input type="radio" id="alternativa_0" name="answer" value="false">
+                <div>
+                    <span>A</span>
+                    Produzir energia para os herbívoros
+                </div>
+            </label>
+        </form>
 
-                    <div>
-                        <span>A</span>
-                        Produzir energia para os herbívoros
-                    </div>
-                </label>
-            </form>
+        <form>
+            <label for="alternativa_1">
+                <input type="radio" id="alternativa_1" name="answer" value="false">
+                <div>
+                    <span>B</span>
+                    Consumir energia dos produtores primários
+                </div>
+            </label>
+        </form>
 
-            <form action="">
-                <label for="alternativa_b">
-                    <input type="radio" id="alternativa_b">
+        <form>
+            <label for="alternativa_2">
+                <input type="radio" id="alternativa_2" name="answer" value="true">
+                <div>
+                    <span>C</span>
+                    Decompor matéria orgânica, reciclando nutrientes para o solo
+                </div>
+            </label>
+        </form>
 
-                    <div>
-                        <span>B</span>
-                        Consumir energia dos produtores primários
-                    </div>
-                </label>
-            </form>
+        
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%;"></div> 
+        </div>
 
-            <form action="">
-                <label for="alternativa_c">
-                    <input type="radio" id="alternativa_c">
+        <div class="timer">
+            <span>00:00</span>
+        </div> 
+        
+        <button>Próximo</button>
+    </section>
 
-                    <div>
-                        <span>C</span>
-                        Decompor matéria orgânica, reciclando nutrientes para o solo
-                    </div>
-                </label>
-            </form>
-
-            <div class="progress-bar">
-                <div class="progress" style="width: 40%;"></div>
-            </div>
-       
-            <div class="pergunta">
-                <span class="timer">00:00</span>
-            </div> 
-
-            <button>Próximo</button>
-        </section>
-    </main>
+    <script src="quizmedio.js"></script>
 </body>
 </html>
