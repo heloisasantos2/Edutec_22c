@@ -19,7 +19,6 @@ body {
 header {
     background-color: var(--verde-barra);
     color: var(--verde-letras);
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,7 +26,7 @@ header {
     top: 0;
     width: 100%;
     z-index: 1000;
-    text-decoration: none;
+  padding: 10px 50px;
 }
 
 header button {
@@ -39,69 +38,6 @@ header button {
     margin: 0 10px;
     border-radius: 5px;
     text-decoration: none;
-}
-
-button:hover {
-    background-color: var(--verde-paginas);
-    text-decoration: none;
-}
-
-header .login img {
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-}
-
-main {
-    padding: 2rem;
-    align-items: center;
-    margin-top: 100px;
-}
-
-main h1 {
-    text-align: center;
-    font-size: 2.5em;
-    margin: 20px 0;
-    color: #31572C;
-    padding-right: 2px;
-    font-family: "Playfair Display", serif;
-}
-
-main section {
-    margin: 20px auto;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    align-items: center;
-}
-
-main section h2 {
-    font-size: 1.5em;
-    margin-bottom: 100vh;
-    color: #31572C;
-    align-items: center;
-    text-align: center;
-    padding: 2rem;
-}
-
-main section p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
-.primeira h2,
-.segunda h2,
-.terceira h2,
-.quarta h2,
-.quinta h2 {
-    background-color: #31572C;
-    color: #D4E9C0;
-    padding: 10px;
-    border-radius: 50%;
-    width: 40px;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
 .conteudo {
@@ -130,6 +66,7 @@ main section p {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .jogos:hover {
@@ -146,6 +83,7 @@ main section p {
     margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .integrantes:hover {
@@ -159,9 +97,9 @@ main section p {
     padding: 10px 20px;
     text-align: center;
     font-size: 20px;
-    margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 .ajuda:hover {
@@ -203,42 +141,6 @@ button:hover {
     background-color: var(--verde-paginas);
 }
 
-main {
-    padding: 2rem;
-    align-items: center;
-}
-
-section {
-    background-color: var(--verde-paginas);
-    border-radius: 10px;
-    padding: 2rem;
-    margin-bottom: 2rem;
-    text-align: center;
-}
-
-h2 {
-    color: var(--verde-letras);
-    align-items: center;
-}
-
-p {
-    line-height: 1.6;
-    color: var(--verde-letras);
-}
-
-img {
-    max-width: 600px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 15px;
-}
-
-.Login div img {
-    width: 50px;
-    height: 50px;
-}
-
 .logo_icone img {
     height: 80px;
     width: 80px;
@@ -251,4 +153,65 @@ img {
 .ajuda a {
     color: var(--verde-letras);
     text-decoration: #3B543F;
+}
+
+main {
+    padding: 10px 400px 95px;
+}
+
+h1 {
+    padding: 23px 34px;
+    font-family: 'Playfair Display', serif;
+    font-size: 42px;
+    color: var(--verde-letras);
+    text-align: center;
+    margin-top: 90px;
+}
+
+section {
+    background-color: #96b496;
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-left: 92px;
+    font-size: 30px;
+    color: #4d774d;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+section p {
+    text-align: center;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #334d33;
+}
+
+
+h1.teia {
+    margin-top: 60px;
+}
+
+.primeira {
+    background-color: #d1f0d1;
+}
+
+.segunda {
+    background-color: #c7e0c7;
+}
+
+.terceira {
+    background-color: #b5d0b5;
+}
+
+.quarta {
+    background-color: #a3c0a3;
+}
+
+.quinta {
+    background-color: #91b091;
 }

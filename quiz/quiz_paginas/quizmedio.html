@@ -1,63 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="quizmedio.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jomhuria&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <title>Quiz Edutec</title>
+    <link rel="stylesheet" href="quizmedio.css">
+    <title>Quiz Médio</title>
 </head>
 <body>
-    <section class="pergunta">
+    <h1>QUIZ MÉDIO</h1>
+    <form id="quiz-form">
+        <div class="pergunta">
+            <h2></h2>
+            <div class="alternativas"></div>
+        </div>
 
-        <h2>Qual O PAPEL DOS DECOMPOSITORES EM UMA <br> CADEIA ALIMENTAR?</h2>
-    </section>
-
-    <section class="alternativas">
-        <form>
-            <label for="alternativa_0">
-                <input type="radio" id="alternativa_0" name="answer" value="false">
-                <div>
-                    <span>A</span>
-                    Produzir energia para os herbívoros
-                </div>
-            </label>
-        </form>
-
-        <form>
-            <label for="alternativa_1">
-                <input type="radio" id="alternativa_1" name="answer" value="false">
-                <div>
-                    <span>B</span>
-                    Consumir energia dos produtores primários
-                </div>
-            </label>
-        </form>
-
-        <form>
-            <label for="alternativa_2">
-                <input type="radio" id="alternativa_2" name="answer" value="true">
-                <div>
-                    <span>C</span>
-                    Decompor matéria orgânica, reciclando nutrientes para o solo
-                </div>
-            </label>
-        </form>
-
-        
         <div class="progress-bar">
             <div class="progress" style="width: 0%;"></div> 
         </div>
-
-        <div class="timer">
-            <span>00:00</span>
-        </div> 
         
-        <button>Próximo</button>
-    </section>
 
-    <script src="quizmedio.js"></script>
+        <div class="progress-b">
+            <div class="progresso" style="width: 0%;"></div>
+            <p id="progresso">1/10</p>
+        </div>
+
+        <h2 class="question-clickable"></h2>
+
+        <button type="button" id="nextButton">Próximo</button>
+
+        <button type="button" class="sair">
+            <a href="../../quiz/bemvindo.html">Sair do quiz</a>
+        </button>
+    </form>
+
+    <script src="./quizmedio.js"></script>
 </body>
 </html>

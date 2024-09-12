@@ -1,63 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="quizdificil.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jomhuria&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <title>Quiz Edutec</title>
+    <link rel="stylesheet" href="quizmedio.css">
+    <title>Quiz Díficil</title>
 </head>
 <body>
-    <main>
-        <section class="pergunta">
-            <h2>COMO A BIOACUMULAÇÃO DE TOXINAS EM UMA CADEIA ALIMENTAR PODE IMPACTAR OS NÍVEIS TRÓFICOS SUPERIORES?</h2>
-        </section>
+    <h1>QUIZ DÍFICIL</h1>
+    <form id="quiz-form">
+        <div class="pergunta">
+            <h2></h2>
+            <div class="alternativas"></div>
+        </div>
 
-        <section class="alternativas">
-            <form>
-                <label for="alternativa_0">
-                    <input type="radio" id="alternativa_0" name="answer" value="false">
-                    <div>
-                        <span>A</span>
-                        As toxinas são diluídas à medida que se movem para cima na cadeia alimentar, reduzindo seu impacto nos predadores.
-                    </div>
-                </label>
-            </form>
-            
-            <form>
-                <label for="alternativa_1">
-                    <input type="radio" id="alternativa_1" name="answer" value="true">
-                    <div>
-                        <span>B</span>
-                        As toxinas se acumulam em maiores concentrações nos níveis tróficos superiores, podendo causar danos graves aos predadores de topo.
-                    </div>
-                </label>
-            </form>
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%;"></div> 
+        </div>
+        
 
-            <form>
-                <label for="alternativa_2">
-                    <input type="radio" id="alternativa_2" name="answer" value="false">
-                    <div>
-                        <span>C</span>
-                        Os níveis tróficos superiores são imunes à bioacumulação de toxinas devido à sua posição na cadeia alimentar.
-                    </div>
-                </label>
-            </form>
+        <div class="progress-b">
+            <div class="progresso" style="width: 0%;"></div>
+            <p id="progresso">1/10</p>
+        </div>
 
-            <div class="progress-bar">
-                <div class="progress" style="width: 0%;"></div> 
-            </div>
 
-            <div class="pergunta">
-                <span class="timer">00:00</span>
-            </div>
+        <button type="button" id="nextButton">Próximo</button>
 
-            <button id="nextButton">Próximo</button>
-        </section>
-    </main>
+        <button type="button" class="sair">
+            <a href="../../quiz/bemvindo.html">Sair do quiz</a>
+        </button>
+    </form>
 
-    <script src="quizdificil.js"></script>
+    <script src="./quizdificil.js"></script>
 </body>
 </html>

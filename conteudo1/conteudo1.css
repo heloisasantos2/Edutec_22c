@@ -19,7 +19,6 @@ body {
 header {
     background-color: var(--verde-barra);
     color: var(--verde-letras);
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -97,7 +96,6 @@ header button {
     padding: 10px 20px;
     text-align: center;
     font-size: 20px;
-    margin: 4px 2px;
     cursor: pointer;
     border-radius: 5px;
     text-decoration: none;
@@ -187,17 +185,26 @@ p {
 }
 
 .seres {
-    background: linear-gradient(#9fc796, #749e6b);
+    padding: 34px 34px;
     background-size: cover;
     font-weight: 100;
     font-family: "Titillium Web", sans-serif;
 }
 
+ .seres p{
+    background: linear-gradient( #8BAF83 25%, #8BAF83 5%);
+    margin: 23px 44px 100px;
+    padding: 5px 34px;
+ }
+
+
 .tabela_niveis {
-    background: linear-gradient(#89b280, #4d7444);
+    background: linear-gradient( #8BAF83 25%, #8BAF83 5%);
     background-size: cover;
     font-weight: 100;
     font-family: "Titillium Web", sans-serif;
+    margin: 23px 44px 100px;
+    padding: 5px 34px;
 }
 
 main {

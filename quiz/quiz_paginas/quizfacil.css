@@ -1,188 +1,89 @@
 :root{
-    --verde-barra:#8BAF83;
-    --verde-paginas:#A7C4A1;
-    --verde-letras:#31572C;
-    --verde-hover:#c8ddba;
-    --branco-fundo:#F6F6E9;
-    --vermelho:#E24343;
-    --verde-acerto:#41B331;
+    --verde-barra: #8BAF83;
+    --verde-paginas: #A7C4A1;
+    --verde-letras: #31572C;
+    --verde-hover: #c8ddba;
+    --branco-fundo: #F6F6E9;
+    --vermelho: #E24343;
+    --verde-acerto: #41B331;
 }
 
 body {
     margin: 0;
     padding: 0;
     font-family: 'Inter', sans-serif;
-    background-color: #a4bf93;
-    color: #2a4232;
+    background-color: var(--verde-paginas);
+    color: var(--verde-letras);
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 67px;
-    padding-top: 80px; 
+    padding-top: 150px; 
+    margin-bottom: 100px;
 }
 
-
-header {
-    width: 100%;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #a4bf93;
-}
-
-main {
-    width: 100%;
-    max-width: 600px;
-    margin: 50px auto;
-    text-align: center;
-}
-
-.pergunta h2 {
-    font-size: 24px;
+h1 {
+    font-family: "Playfair Display", serif;
     margin-bottom: 26px;
     text-align: center;
-    font-family: "Playfair Display", serif;
-
+    font-size: 30px;
 }
 
-.pergunta .progress {
+form {
     width: 100%;
-    height: 10px;
-    background-color: #e7f2e1;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    position: relative;
-}
-
-.pergunta .progress div {
-    width: 10%;
-    height: 100%;
-    background-color: #274828;
-    border-radius: 5px;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-
-.pergunta .timer {
-    font-size: 18px;
-    color: var(--verde-letras);
+    max-width: 600px;
     background-color: var(--branco-fundo);
-    padding: 5px 15px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 10px;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.pergunta {
-    position: fixed;
-    top: 0;
-    left: 52%;
-    transform: translateX(-50%);
-    margin-top: 0;
-    z-index: 1000;
-    margin-top: 14px;
-    font-family: "Titillium Web", sans-serif;
-}
-
-.pergunta .timer {
-    font-size: 18px;
-    color: #274828;
-    background-color: var(--branco-fundo);
-    padding: 5px 15px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 6px;
-}
-
-.outro-elemento-acima {
-    margin-bottom: 0px; 
-}
-
-.alternativas {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.alternativas form {
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.alternativas label {
+label {
     display: flex;
     align-items: center;
     background-color: var(--branco-fundo);
     padding: 15px 20px;
-    border: 2px solid transparent;
+    border: 2px solid transparent var(--verde-letras);
     border-radius: 30px;
     font-size: 18px;
     cursor: pointer;
-    transition: border-color 0.3s ease;
-    min-height: 60px;
-    box-sizing: border-box; 
+    transition: background-color 0.3s ease;
+    margin-bottom: 10px;
 }
 
-.alternativas label:hover {
+label:hover {
     background-color: var(--verde-hover);
 }
 
-.alternativas input[type="radio"] {
+input[type="radio"] {
     display: none;
 }
 
-.alternativas input[type="radio"]:checked + div {
-    background-color: var(--verde-hover);
-}
-
-.alternativas div {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    color: #274828;
-}
-
-.alternativas div span {
-    font-size: 18px;
+input[type="radio"]:checked + span {
     font-weight: bold;
-    margin-right: 10px;
 }
 
-.correct {
-    border: 3px solid #2e8434;
+span {
+    margin-left: 10px;
+    padding: 15px 30px;
 }
 
-.incorrect {
-    border: 3px solid #e53935;
-}
-
-.alternativas button {
-    background-color: #274828;
+button {
+    background-color: var(--verde-letras);
     color: var(--branco-fundo);
-    border: none;
+    border: none var(--verde-letras);
     padding: 15px 30px;
     font-size: 18px;
     cursor: pointer;
     border-radius: 30px;
-    box-shadow: 3px 3px #1c3620;
-    transition: all 0.3s ease;
     margin-top: 20px;
     width: 100%;
+    font-family: "Titillium Web", sans-serif;
+    transition: background-color 0.3s ease;
 }
 
-.alternativas button:hover {
+button:hover {
     background-color: var(--verde-paginas);
 }
-
-.progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #ddd;
-    border-radius: 5px;
-    overflow: hidden;
-  }
 
   .progress-bar .progress {
     height: 100%;
@@ -190,54 +91,38 @@ main {
     width: 15%;
     border-radius: 5px;
     transition: width 0.5s ease;
+    background-color: var(--verde-letras);
   }
 
-.progress-bar {
-    width: 100%;
+  .progress-bar {
+    border: #31572C;
+    margin-inline: auto;
     height: 10px;
     background-color: var(--branco-fundo); 
     position: fixed;
     top: 7px;
     left: 17px;
-    right: 19px;
+    right: 17px;
     z-index: 1000;
+    border-radius: 5px;
+    overflow: hidden;
 }
 
-.progress-bar .progress {
-    height: 100%;
-    background-color: var(--verde-letras);
-    width: 10%; 
+#progresso {
+    position: absolute;
+    top: 10px; 
+    left: 10px; 
+    font-size: 20px; 
+    font-weight: bold; 
+    padding: 5px 10px;   
 }
 
-    .progress-bar {
-        width: 100%;
-        height: 10px;
-        background-color: #ddd;
-        border-radius: 5px;
-        overflow: hidden;
-      }
 
-      .progress-bar .progress {
-        height: 100%;
-        background-color: #4CAF50;
-        width: 15%;
-        border-radius: 5px;
-        transition: width 0.5s ease;
-      }
+.sair a {
+    text-decoration: none;
+    color: inherit; /* Mantém a cor do texto do botão */
+    display: block; /* Faz o link ocupar o espaço completo do botão */
+    text-align: center; /* Centraliza o texto no botão */
+    
+}
 
-    .progress-bar {
-        width: 100%;
-        height: 10px;
-        background-color: var(--branco-fundo); 
-        position: fixed;
-        top: 7px;
-        left: 17px;
-        right: 19px;
-        z-index: 1000;
-    }
-
-    .progress-bar .progress {
-        height: 100%;
-        background-color: var(--verde-letras);
-        width: 10%; 
-    }

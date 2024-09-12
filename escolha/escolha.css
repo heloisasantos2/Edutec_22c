@@ -19,7 +19,6 @@
   header {
     background-color: var(--verde-barra);
     color: var(--verde-letras);
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -33,7 +32,6 @@
   header button {
     background-color: transparent;
     border: none;
-    color: #3B543F;
     font-size: 18px;
     cursor: pointer;
     margin: 0 10px;
@@ -48,7 +46,7 @@
   
   header button.bio {
     font-size: 34px;
-    font-weight: bold;
+ 
   }
   
   header button img {
@@ -69,6 +67,9 @@
       color: var(--verde-letras);
       text-decoration: #3B543F;
   }
+ .bio{
+  font-weight: bolder;
+ }
   
   :root{
     --verde-barra:#8BAF83;
@@ -94,7 +95,6 @@
   
   header button.bio {
     font-size: 34px;
-    font-weight: bold;
   }
   
   header button img {
@@ -123,11 +123,10 @@
   h1 {
     font-size: 2.5rem;
     color: var(--verde-letras);
-  
     font-family: "Playfair Display", serif;
   }
   
-  section {
+  section.cadeia {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -140,6 +139,42 @@
     background-color: var(--branco-fundo);
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
+
+  section.teia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--branco-fundo);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  section.mapa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 300px;
+    height: 400px;
+    padding: 20px;
+    border-radius: 20px;
+    background-color: var(--branco-fundo);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  }
+
+  .aprender {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
   
   section img {
     width: 120px;
@@ -168,5 +203,4 @@
     border-radius: 5px;
     cursor: pointer;
     font-size: 1rem;
-    font-weight: 600;
   }

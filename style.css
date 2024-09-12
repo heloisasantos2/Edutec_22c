@@ -3,23 +3,25 @@
     --verde-paginas:#A7C4A1;
     --verde-letras:#31572C;
     --branco-fundo:#F6F6E9;
+    --preto-letra: #000000a6;
 }
 
 body {
-    font-family: Playfair Display, regular;
+    font-family: 'Playfair Display', regular;
     background-color: var(--verde-paginas);
     margin: 0;
     padding: 0;
-    height: 100vh;
     justify-content: center;
     align-items: center;
     text-decoration: none;
+    height: 100%;
+    width: 100%;
+    display: flex;
 }
 
 header {
     background-color: var(--verde-barra);
     color: var(--verde-letras);
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,6 +34,7 @@ header {
 
 header button {
     background-color: transparent;
+    width: fit-content;
     border: none;
     color: #3B543F;
     font-size: 18px;
@@ -40,6 +43,10 @@ header button {
     border-radius: 5px;
     text-decoration: none;
     font-family: Inter, light;
+}
+
+main {
+    margin-top: 40px;
 }
 
 button:hover {
@@ -59,6 +66,7 @@ header button img {
 
 .principal {
     display: flex;
+    height: 700px;
     align-items: flex-start;
 }
 
@@ -73,30 +81,37 @@ header button img {
 .boas_vindas {
     background-color: #F6F6E9;
     max-width: 100%;
+    width: 1500px;
     height: 700px;
     margin: 20px;
-    padding: 20px;
     border-radius: 15px;
-    text-align: flex-start;
+    text-align: center;
     margin-top: 120px;
 }
 
  h2 {
+    display: block;
     color: var(--verde-letras);
-    font-size: 48px;
-    align-items: start;
-    text-align: flex-start;
-    margin-top: 37px;
-    font-family: Inter, light;
-
-
+    font-size: 56px;
+    width: fit-content;
+    padding-left: 300px;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-top: 50px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+    padding-top: 40px;
 }
 
- h1 {
-    color: var(--verde-letras);
-    font-size: 20px;
+h1 {
+    color: var(--preto-letra);
+    font-size: 25px;
     line-height: 1.6;
-    align-items: start;
+    margin-inline: auto;
+    margin-top: 10px; 
+    margin-bottom: 20px; 
     padding-right: 2px;
     font-family: Inter, light;
 }
@@ -111,6 +126,7 @@ header button img {
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    display: flex;
     align-items: start;
 }
 
@@ -139,7 +155,56 @@ div {
     justify-content: space-between;
 }
 
+.boasv {
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    width:3000px;
+}
+
 .bio a, .conteudo a, .jogos a, .integrantes a, .ajuda a, .comecar a {
     color: var(--verde-letras);
     text-decoration: #3B543F;
+}
+
+button.comecar {
+    background-color: var(--verde-barra);
+    border: none;
+    padding: 12px 25px;
+    height: 45px;
+    width: 110px;
+    border-radius: 10px;
+    font-size: 1rem;
+    display: flex;
+    align-items: flex-start;
+    margin-inline: 210px;
+    margin-top: -120px;
+    margin-left: 410px;
+}
+
+button.comecar:hover {
+    background-color: var(--verde-paginas);
+    text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+    .boas_vindas {
+        width: 90%;
+        margin-top: 100px;
+    }
+
+    .principal {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    h2 {
+        padding-left: 0;
+        margin-top: 40px;
+    }
+
+    button.comecar {
+        margin-left: 150px;
+        margin-top: -50px;
+    }
 }

@@ -92,41 +92,52 @@ let score = 0;
 
 function showQuestion() {
     const question = quizzes[0].questions[currentQuestionIndex];
-    document.querySelector('.pergunta h2').textContent = question.question;
+    const questionContainer = document.querySelector('.pergunta h2');
+    const alternativesContainer = document.querySelector('.alternativas');
 
-    const answerElements = document.querySelectorAll('.alternativas form');
-    answerElements.forEach((form, index) => {
-        const radio = form.querySelector('input[type="radio"]');
-        const label = form.querySelector('label');
-        radio.id = `alternativa_${index}`;
-        radio.name = "answer"; // Ensure all radio buttons have the same name
-        radio.value = question.answers[index].correct;
-        label.innerHTML = `
-            <input type="radio" id="alternativa_${index}" name="answer" value="${question.answers[index].correct}">
-            <div>
-                <span>${String.fromCharCode(65 + index)}</span>
-                ${question.answers[index].Option}
-            </div>
-        `;
-        label.style.border = ''; // Clear previous borders
+    questionContainer.textContent = `${currentQuestionIndex + 1}. ${question.question}`;
+
+    alternativesContainer.innerHTML = '';
+
+    question.answers.forEach((answer, index) => {
+        const alternativeDiv = document.createElement('div');
+        alternativeDiv.classList.add('alternativa');
+
+        const radioInput = document.createElement('input');
+        radioInput.type = 'radio';
+        radioInput.id = `alternativa_${index}`;
+        radioInput.name = 'answer';
+        radioInput.value = answer.correct;
+
+        const label = document.createElement('label');
+        label.setAttribute('for', `alternativa_${index}`);
+        label.textContent = `${String.fromCharCode(65 + index)}. ${answer.Option}`;
+
+        alternativeDiv.appendChild(radioInput);
+        alternativeDiv.appendChild(label);
+        alternativesContainer.appendChild(alternativeDiv);
     });
 
-    document.querySelector('.progress-bar .progress').style.width = `${(currentQuestionIndex + 1) * 100 / quizzes[0].questions.length}%`;
-    document.querySelector('.timer').textContent = '00:00'; // Timer estático por enquanto
+
+    const progress = (currentQuestionIndex + 1) * 100 / quizzes[0].questions.length;
+    document.querySelector('.progress-bar .progress').style.width = `${progress}%`;
+    document.getElementById('progress').textContent = currentQuestionIndex + 1;
 }
 
 function nextQuestion() {
     const selectedOption = document.querySelector('input[name="answer"]:checked');
     if (selectedOption) {
         const isCorrect = selectedOption.value === 'true';
-        const allLabels = document.querySelectorAll('.alternativas label');
-        
-        allLabels.forEach(label => {
-            const input = label.querySelector('input[type="radio"]');
+        const allAlternatives = document.querySelectorAll('.alternativa');
+
+        allAlternatives.forEach(alternative => {
+            const input = alternative.querySelector('input[type="radio"]');
             if (input.value === 'true') {
-                label.style.border = '2px solid green'; // Bordas verdes para as corretas
+                alternative.style.border = '2px solid green';
+                alternative.style.borderRadius = '30px'; 
             } else if (input.checked) {
-                label.style.border = '2px solid red'; // Bordas vermelhas para as erradas
+                alternative.style.border = '2px solid red';
+                alternative.style.borderRadius = '30px'
             }
         });
 
@@ -148,13 +159,126 @@ function nextQuestion() {
 
 function showResult() {
     document.querySelector('.pergunta h2').textContent = `Você terminou o quiz! Sua pontuação é ${score} de ${quizzes[0].questions.length}.`;
-    document.querySelector('.alternativas').innerHTML = '';
+    document.querySelector('.alternativas').innerHTML = ''; 
     document.querySelector('.progress-bar').style.display = 'none';
-    document.querySelector('.timer').style.display = 'none';
+    document.getElementById('nextButton').style.display = 'none';
 }
 
-document.querySelector('button').addEventListener('click', nextQuestion);
+document.getElementById('nextButton').addEventListener('click', nextQuestion);
 
 window.onload = function() {
     showQuestion();
 };
+
+
+
+
+
+
+
+let currentQuizfacilhtml = 0;
+let pontuaçao = 0;
+
+// Embaralha as perguntas para que sejam exibidas em ordem aleatória
+function shuffleQuestions() {
+    quizzes[0].questions = quizzes[0].questions.sort(() => Math.random() - 0.5);
+}
+
+function showQuestion() {
+    if (currentQuizfacilhtml >= quizzes[0].questions.length) {
+        showResult(); // Se já exibiu todas as perguntas, exibe o resultado
+        return;
+    }
+
+    const question = quizzes[0].questions[currentQuizfacilhtml];
+    const questionContainer = document.querySelector('.pergunta h2');
+    const alternativesContainer = document.querySelector('.alternativas');
+
+    questionContainer.textContent = `${currentQuizfacilhtml + 1}. ${question.question}`;
+
+    alternativesContainer.innerHTML = '';
+
+    question.answers.forEach((answer, index) => {
+        const alternativeDiv = document.createElement('div');
+        alternativeDiv.classList.add('alternativa');
+
+        const radioInput = document.createElement('input');
+        radioInput.type = 'radio';
+        radioInput.id = `alternativa_${index}`;
+        radioInput.name = 'answer';
+        radioInput.value = answer.correct;
+
+        const label = document.createElement('label');
+        label.setAttribute('for', `alternativa_${index}`);
+        label.textContent = `${String.fromCharCode(65 + index)}. ${answer.Option}`;
+
+        alternativeDiv.appendChild(radioInput);
+        alternativeDiv.appendChild(label);
+        alternativesContainer.appendChild(alternativeDiv);
+    });
+
+    // Atualiza a barra de progresso
+    const progressPercentage = ((currentQuizfacilhtml+ 1) / quizzes[0].questions.length) * 100;
+    document.querySelector('.progress').style.width = `${progressPercentage}%`;
+
+    // Atualiza o texto da barra de progresso
+    document.getElementById('progresso').textContent = `${currentQuizfacilhtml + 1}/${quizzes[0].questions.length}`;
+}
+
+function nextQuestion() {
+    const selectedOption = document.querySelector('input[name="answer"]:checked');
+    if (selectedOption) {
+        const isCorrect = selectedOption.value === 'true';
+        const allAlternatives = document.querySelectorAll('.alternativa');
+
+        allAlternatives.forEach(alternative => {
+            const input = alternative.querySelector('input[type="radio"]');
+            if (input.value === 'true') {
+                alternative.style.border = '2px solid green'; // Marca a resposta correta
+            } else if (input.checked) {
+                alternative.style.border = '2px solid red'; // Marca a resposta errada
+            }
+        });
+
+        if (isCorrect) {
+            score++;
+        }
+        
+        setTimeout(() => {
+            currentQuizfacilhtml++; // Vai para a próxima pergunta
+            showQuestion(); // Exibe a próxima pergunta
+        }, 1000); // Espera um segundo antes de avançar
+    } else {
+        alert('Por favor, selecione uma resposta.');
+    }
+}
+
+function showResult() {
+    document.querySelector('.pergunta h2').textContent = `Você terminou o quiz! Sua pontuação é ${score} de ${quizzes[0].questions.length}.`;
+    document.querySelector('.alternativas').innerHTML = ''; 
+    
+    // Esconde a barra de progresso
+    document.querySelector('.progress-bar').style.display = 'none';
+    document.querySelector('.progress-b').style.display = 'none';
+
+    // Esconde o botão de próximo
+    document.getElementById('nextButton').style.display = 'none';
+}
+
+// Inicia o quiz embaralhando as perguntas
+window.onload = function() {
+    shuffleQuestions(); // Embaralha as perguntas
+    showQuestion(); // Exibe a primeira pergunta
+};
+
+document.getElementById('nextButton').addEventListener('click', nextQuestion);
+
+
+
+
+
+
+
+
+
+

@@ -20,7 +20,6 @@ body {
 header {
     background-color: var(--verde-barra);
     color: var(--verde-letras);
-    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -155,7 +154,7 @@ h1, h2 {
 
 h1 {
     text-align: center;
-    font-size: 36px;
+    font-size: 30px;
     margin-top: 0;
 }
 
@@ -165,6 +164,7 @@ h2 {
 }
 
 p {
+    color: var(--verde-letras);
     text-align: center;
     line-height: 1.6;
     margin-bottom: 20px;
@@ -189,20 +189,6 @@ p {
     margin: 20px auto;
 }
 
-.exemplo {
-    color: var(--branco-fundo);
-    background-color: var(--verde-letras);
-    padding: 10px;
-    text-align: center;
-    border-radius: 10px;
-    margin-bottom: 20px;
-}
-
-.exemplo p {
-    font-size: 24px;
-    font-weight: bold;
-}
-
 .logo_icone img {
     height: 80px;
     width: 80px;
@@ -215,4 +201,39 @@ p {
 .ajuda a {
     color: var(--verde-letras);
     text-decoration: #3B543F;
+}
+
+.importance {
+    justify-content: center;
+    color: var(--verde-letras);
+    border-radius: 13px;
+    margin: 23px 44px 100px;
+    padding: 45px 34px;
+    background: linear-gradient( #8BAF83 25%, #8BAF83 5%); 
+}
+
+.intoxication {
+
+    padding: 20px;
+}
+
+
+ .exemplo {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient( #8BAF83 25%, #8BAF83 5%); 
+    margin: 45px 300px 3px;
+    padding: 1px 2px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+
+
+
+footer {
+    padding: 20px 0;
+    text-align: center;
 }

@@ -1,63 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="stylesheet" href="quizfacil.css">
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Indie+Flower&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Jomhuria&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-    <title>Quiz Edutec</title>
+    <link rel="stylesheet" href="quizfacil.css">
+    <title>Quiz Fácil</title>
 </head>
 <body>
-    <main>
-        <section class="pergunta">
-            <h2>O QUE É UMA CADEIA ALIMENTAR?</h2>
-        </section>
+    <h1>QUIZ FÁCIL</h1>
+    <form id="quiz-form">
+        <div class="pergunta">
+            <h2></h2>
+            <div class="alternativas"></div>
+        </div>
 
-        <section class="alternativas">
-            <form>
-                <label for="alternativa_0">
-                    <input type="radio" id="alternativa_0" name="answer" value="false">
-                    <div class="a">
-                        <span>A</span>
-                        Um tipo de planta
-                    </div>
-                </label>
-            </form>
-            
-            <form>
-                <label for="alternativa_1">
-                    <input type="radio" id="alternativa_1" name="answer" value="true">
-                    <div class="b">
-                        <span>B</span>
-                        A sequência de organismos que se alimentam uns dos outros
-                    </div>
-                </label>
-            </form>
-            
-            <form>
-                <label for="alternativa_2">
-                    <input type="radio" id="alternativa_2" name="answer" value="false">
-                    <div class="c">
-                        <span>C</span>
-                        Um ciclo de água
-                    </div>
-                </label>
-            </form>
+        <div class="progress-bar">
+            <div class="progress" style="width: 0%;"></div> 
+        </div>
+        
 
-            <div class="progress-bar">
-                <div class="progress" style="width: 0%;"></div>
-            </div>
+        <div class="progress-b">
+            <div class="progresso" style="width: 0%;"></div>
+            <p id="progresso">1/10</p>
+        </div>
 
-            <div class="pergunta">
-                <span class="timer">00:00</span>
-            </div>
+        <button type="button" id="nextButton">Próximo</button>
 
-            <button>Próximo</button>
-        </section>
-    </main>
+        <button type="button" class="sair">
+            <a href="../../quiz/bemvindo.html">Sair do quiz</a>
+        </button>
+    </form>
+   
 
-    <script src="quizfacil.js"></script> 
+    <script src="./quizfacil.js"></script>
+
 </body>
 </html>
